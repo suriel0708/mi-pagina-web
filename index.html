@@ -1,12 +1,90 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
     <head>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mi Página Web</title>
+        <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .btn {
+            background: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff3b2f;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
     </head>
     <body>
-        <h1>¡Hola Mundo!</h1>
-        <p>Esta es mi página web desplegada con Surge.sh.</p>
+        <div class="container">
+            <h1>¡Bienvenido a Mi Página Web!</h1>
+            <p>
+                Esta es una página de ejemplo creada con HTML y CSS. Aquí puedes
+                mostrar información sobre ti, tu proyecto o cualquier cosa que
+                desees compartir con el mundo. ¡Haz clic en el botón para ver la
+                magia!
+            </p>
+            <button class="btn" onclick="mostrarMensaje()">Haz clic
+                aquí</button>
+        </div>
+
+        <script>
+        // Función para el botón
+        function mostrarMensaje() {
+            alert("¡Gracias por visitar mi página! 🎉");
+        }
+    </script>
     </body>
 </html>
